@@ -40,6 +40,7 @@ class Browser:
 
     def __init__(self, showWindow=True, proxy=None , downloadPath:str=None, driverPath:str=None, arguments=["--disable-dev-shm-usage","--no-sandbox"]):
         options = webdriver.ChromeOptions()
+        options.add_argument("--incognito")
 
         for argument in arguments:
             options.add_argument(argument)
